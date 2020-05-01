@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Index
+comment0.text=\r\n\ Interface\ for\ the\ indexes\r\n\r\n\ @author\ EvanVu\r\n
+comment1.params=text\ lineNum
+comment1.target=void\ processText(java.lang.String[],\ int)
+comment1.text=\r\n\ Receive\ text\ from\ an\ input\ file\ and\ put\ them\ into\ the\ index\r\n\ @param\ an\ array\ of\ text\r\n
+comment2.params=
+comment2.target=void\ printIndex()
+comment2.text=\r\n\ Print\ to\ the\ terminal\ the\ index\r\n
+numComments=3

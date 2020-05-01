@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=HashIndex
+comment0.text=\r\n\ An\ index\ using\ HashMap\r\n\r\n\ @author\ EvanVu\r\n
+comment1.params=
+comment1.target=HashIndex()
+comment2.params=text\ lineNum
+comment2.target=void\ processText(java.lang.String[],\ int)
+comment3.params=
+comment3.target=void\ printIndex()
+numComments=4
