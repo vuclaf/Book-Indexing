@@ -7,24 +7,39 @@ import java.util.*;
 public class Entry
 {
     String word;
-    TreeSet<Integer> set;
+    TreeSet<Integer> set = new TreeSet<Integer>();
     
     /**
      * Constructor for objects of class Entry
+     * @param the word of the entry
      */
-    public Entry()
+    public Entry(String word)
     {
+        this.word=word;
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Add to the list of entries
      *
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public void addEntry(int lineNum)
     {
-        // put your code here
-        return x + y;
+        set.add(lineNum);
+    }
+    
+    /**
+     * Return all entries for a given word
+     *
+     * @return  the string listing all the entries
+     */
+    public String printAll()
+    {
+        String result=word + ": ";
+        for(Integer lineNum:set){
+            result+= lineNum + ", ";
+        }
+        return result;
     }
 }

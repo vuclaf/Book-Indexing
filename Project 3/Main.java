@@ -1,33 +1,25 @@
-
+import java.util.*;
+import java.io.*;
 /**
- * Write a description of class Main here.
+ * The Main class to create an index
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author EvanVu
  */
-public class Main
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Main
-     */
-    public Main()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class Main{
+    public static void main(String[] args) throws IOException{
+        TreeIndex tree = new TreeIndex();
+        HashIndex hash = new HashIndex();
+        ListIndex list = new ListIndex();
+        Scanner sc = new Scanner(new File("Shakespeare.txt"));
+        int lineNum=0;
+        while(sc.hasNext()){
+            lineNum++;
+            String newLine = sc.nextLine().toLowerCase();
+            String[] newWords = newLine.split("[^A-Za-z]+");
+            tree.processText(newWords,lineNum);
+            //hash.processText(newWords,lineNum);
+            //list.processText(newWords,lineNum);
+        }
+        tree.printIndex();
     }
 }

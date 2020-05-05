@@ -1,33 +1,70 @@
-
+import java.util.*;
+import java.io.*;
 /**
- * Write a description of class ListIndex here.
+ * Index implemented by a list
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author EvanVu
  */
-public class ListIndex
+public class ListIndex implements Index
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class ListIndex
-     */
-    public ListIndex()
-    {
-        // initialise instance variables
-        x = 0;
+    List<Entry> list = new ArrayList();
+    ArrayList<String> dict = new ArrayList();
+    
+    public ListIndex()throws IOException{
+        Scanner sc = new Scanner(new File("English.txt"));
+        sc.nextLine();
+        while(sc.hasNext()){
+            dict.add(sc.nextLine());
+        }
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * Receive text from an input file and put them into the index
+     * @param an array of text
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void processText(String[] text, int lineNum){
+        for (String word:text){
+           int checker=this.checkEntry(word);
+           if(this.checkDict(word)){
+               if(checker==-1){
+                   list.add(new Entry(word));
+                   list.get(list.size()-1).addEntry(lineNum);
+               }
+               else list.get(checker).addEntry(lineNum);
+           }
+       }
+    }
+    
+    /**
+     * Print to the terminal the index
+     */
+    public void printIndex(){
+        for(Entry entry:list){
+            entry.printAll();
+        }
+    }
+    
+    /**
+     * Method to check if the word is in the dictionary
+     * @param the word to be searched
+     * @return true if the word is in the English dictionary
+     */
+    public boolean checkDict(String word){
+        int res = Collections.binarySearch(dict,word);
+        if (res>0) return true;
+        else return false;
+    }
+    
+    /**
+     * Method to check if the word is already in the list
+     * @param the word to be searched
+     * @return true if the word is in the list
+     */
+    public int checkEntry(String word){
+        if (list.isEmpty()) return -1;
+        for(Entry entry:list){
+            if (entry.word.equals(word)) return list.indexOf(entry);
+        }
+        return -1;
     }
 }

@@ -16,4 +16,11 @@ public interface Index
      * Print to the terminal the index
      */
     void printIndex();
+    
+    /**
+     * Method to check if the word is in the dictionary
+     * @param the word to be searched
+     * @return true if the word is in the English dictionary
+     */
+    boolean checkDict(String word);
 }

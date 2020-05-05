@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Entry
+comment0.text=\r\n\ List\ entry\ to\ be\ on\ the\ ListIndex\r\n\r\n\ @author\ EvanVu\r\n
+comment1.params=word
+comment1.target=Entry(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Entry\r\n\ @param\ the\ word\ of\ the\ entry\r\n
+comment2.params=lineNum
+comment2.target=void\ addEntry(int)
+comment2.text=\r\n\ Add\ to\ the\ list\ of\ entries\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment3.params=
+comment3.target=java.lang.String\ printAll()
+comment3.text=\r\n\ Return\ all\ entries\ for\ a\ given\ word\r\n\r\n\ @return\ \ the\ string\ listing\ all\ the\ entries\r\n
+numComments=4

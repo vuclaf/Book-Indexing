@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=ListIndex
+comment0.text=\r\n\ Index\ implemented\ by\ a\ list\r\n\r\n\ @author\ EvanVu\r\n
+comment1.params=
+comment1.target=ListIndex()
+comment2.params=text\ lineNum
+comment2.target=void\ processText(java.lang.String[],\ int)
+comment2.text=\r\n\ Receive\ text\ from\ an\ input\ file\ and\ put\ them\ into\ the\ index\r\n\ @param\ an\ array\ of\ text\r\n
+comment3.params=
+comment3.target=void\ printIndex()
+comment3.text=\r\n\ Print\ to\ the\ terminal\ the\ index\r\n
+comment4.params=word
+comment4.target=boolean\ checkDict(java.lang.String)
+comment4.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\r\n
+comment5.params=word
+comment5.target=int\ checkEntry(java.lang.String)
+comment5.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ already\ in\ the\ list\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ true\ if\ the\ word\ is\ in\ the\ list\r\n
+numComments=6
