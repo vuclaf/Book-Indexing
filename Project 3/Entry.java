@@ -36,10 +36,13 @@ public class Entry
      */
     public String printAll()
     {
-        String result=word + ": ";
-        for(Integer lineNum:set){
-            result+= lineNum + ", ";
+        String result=word + " [";
+        Iterator itr = set.iterator();
+        while(itr.hasNext()){
+            result+= itr.next();
+            if(itr.hasNext()) result+=", ";
         }
+        result+="]";
         return result;
     }
 }

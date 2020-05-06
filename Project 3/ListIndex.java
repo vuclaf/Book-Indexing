@@ -40,7 +40,7 @@ public class ListIndex implements Index
      */
     public void printIndex(){
         for(Entry entry:list){
-            entry.printAll();
+            System.out.println(entry.printAll());
         }
     }
     

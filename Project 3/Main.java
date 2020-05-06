@@ -17,9 +17,9 @@ public class Main{
             String newLine = sc.nextLine().toLowerCase();
             String[] newWords = newLine.split("[^A-Za-z]+");
             tree.processText(newWords,lineNum);
-            //hash.processText(newWords,lineNum);
-            //list.processText(newWords,lineNum);
+            hash.processText(newWords,lineNum);
+            list.processText(newWords,lineNum);
         }
-        tree.printIndex();
+        list.printIndex();
     }
 }

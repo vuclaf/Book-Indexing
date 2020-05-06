@@ -31,11 +31,13 @@ public class HashIndex implements Index
    public void printIndex(){
        for (String word:map.keySet()){
            String lines="";
-           for (Integer line:map.get(word)){
-               lines+= line + ",";
+           Iterator itr = map.get(word).iterator();
+           while(itr.hasNext()){
+               lines+=itr.next();
+               if (itr.hasNext()) lines+=", ";
            }
-           System.out.println("The word " + word + " appears on lines: " + lines);
-        }
+           System.out.println(word + " [" + lines + "]");
+       }
    }
    
    /**
