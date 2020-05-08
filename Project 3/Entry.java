@@ -4,7 +4,7 @@ import java.util.*;
  *
  * @author EvanVu
  */
-public class Entry
+public class Entry implements Comparable<Entry>
 {
     String word;
     TreeSet<Integer> set = new TreeSet<Integer>();
@@ -44,5 +44,12 @@ public class Entry
         }
         result+="]";
         return result;
+    }
+    
+    /**
+     * Comparator for the entry class
+     */
+    public int compareTo(Entry en){
+        return this.word.compareTo(en.word);
     }
 }

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Main
-comment0.text=\r\n\ The\ Main\ class\ to\ create\ an\ index\r\n\r\n\ @author\ EvanVu\r\n
+comment0.text=\n\ The\ Main\ class\ to\ create\ an\ index\n\n\ @author\ EvanVu\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 numComments=2

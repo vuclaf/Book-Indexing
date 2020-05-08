@@ -21,5 +21,7 @@ public class Main{
             list.processText(newWords,lineNum);
         }
         list.printIndex();
+        hash.printIndex();
+        tree.printIndex();
     }
 }

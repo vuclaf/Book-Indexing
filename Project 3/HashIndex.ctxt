@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=HashIndex
-comment0.text=\r\n\ An\ index\ using\ HashMap\r\n\r\n\ @author\ EvanVu\r\n
+comment0.text=\n\ An\ index\ using\ HashMap\n\n\ @author\ EvanVu\n
 comment1.params=
 comment1.target=HashIndex()
 comment2.params=text\ lineNum
@@ -9,5 +9,5 @@ comment3.params=
 comment3.target=void\ printIndex()
 comment4.params=word
 comment4.target=boolean\ checkDict(java.lang.String)
-comment4.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\r\n
+comment4.text=\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\n\ @param\ the\ word\ to\ be\ searched\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\n
 numComments=5

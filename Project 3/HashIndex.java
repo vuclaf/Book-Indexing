@@ -7,21 +7,21 @@ import java.io.*;
  */
 public class HashIndex implements Index
 {
-   HashMap<String, HashSet<Integer>> map = new HashMap<String, HashSet<Integer>>();
+   HashMap<String, TreeSet<Integer>> map = new HashMap<String, TreeSet<Integer>>();
    ArrayList<String> dict = new ArrayList();
    
    public HashIndex() throws IOException{
-    Scanner sc = new Scanner(new File("English.txt"));
-    sc.nextLine();
-    while(sc.hasNext()){
-        dict.add(sc.nextLine());
-    }
+        Scanner sc = new Scanner(new File("English.txt"));
+        sc.nextLine();
+        while(sc.hasNext()){
+            dict.add(sc.nextLine());
+        }
    }
    
    public void processText(String[] text, int lineNum){
        for (String word:text){
            if (this.checkDict(word)){
-               HashSet<Integer> set = map.getOrDefault(word, new HashSet<Integer>());
+               TreeSet<Integer> set = map.getOrDefault(word, new TreeSet<Integer>());
                set.add(lineNum);
                map.put(word,set);
             }
@@ -29,9 +29,10 @@ public class HashIndex implements Index
    }
    
    public void printIndex(){
-       for (String word:map.keySet()){
+       Map<String,TreeSet<Integer>> treemap = new TreeMap<String,TreeSet<Integer>>(map);
+       for (String word:treemap.keySet()){
            String lines="";
-           Iterator itr = map.get(word).iterator();
+           Iterator itr = treemap.get(word).iterator();
            while(itr.hasNext()){
                lines+=itr.next();
                if (itr.hasNext()) lines+=", ";

@@ -9,6 +9,7 @@ public class ListIndex implements Index
 {
     List<Entry> list = new ArrayList();
     ArrayList<String> dict = new ArrayList();
+    PrintWriter writer = null;
     
     public ListIndex()throws IOException{
         Scanner sc = new Scanner(new File("English.txt"));
@@ -16,6 +17,7 @@ public class ListIndex implements Index
         while(sc.hasNext()){
             dict.add(sc.nextLine());
         }
+        writer = new PrintWriter(new File("output.txt"));
     }
     
     /**
@@ -39,9 +41,12 @@ public class ListIndex implements Index
      * Print to the terminal the index
      */
     public void printIndex(){
+        Collections.sort(list);
         for(Entry entry:list){
+            writer.println(entry.printAll());
             System.out.println(entry.printAll());
         }
+        writer.close();
     }
     
     /**
