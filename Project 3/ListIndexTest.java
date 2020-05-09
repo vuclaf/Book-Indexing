@@ -46,7 +46,27 @@ public class ListIndexTest
         listIndex.processText(new String[]{"Fox","is","cute","animal"}, 5);
         listIndex.processText(new String[]{"fox"}, 2);
         listIndex.processText(new String[]{"is","animal"}, 3);
-        listIndex.printIndex();
+        String result = "animal [3, 5]";
+        assertTrue(result.equals(listIndex.printTest(0)));
+    }
+    
+    @Test
+    public void checkDict() throws IOException
+    {
+        ListIndex listIndex = new ListIndex();
+        assertTrue(listIndex.checkDict("king"));
+        assertFalse(listIndex.checkDict("skrrrt"));
+    }
+    
+    @Test
+    public void checkEntry() throws IOException
+    {
+        ListIndex listIndex = new ListIndex();
+        listIndex.processText(new String[]{"Fox","is","cute","animal"}, 5);
+        listIndex.processText(new String[]{"fox"}, 2);
+        listIndex.processText(new String[]{"is","animal"}, 3);
+        assertTrue(listIndex.checkEntry("fox")>0);
+        assertFalse(listIndex.checkEntry("cat")>0);
     }
 }
 

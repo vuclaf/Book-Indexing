@@ -1,13 +1,19 @@
 #BlueJ class context
 comment0.target=HashIndex
-comment0.text=\n\ An\ index\ using\ HashMap\n\n\ @author\ EvanVu\n
+comment0.text=\r\n\ An\ index\ using\ HashMap\r\n\r\n\ @author\ EvanVu\r\n
 comment1.params=
 comment1.target=HashIndex()
+comment1.text=\r\n\ Constructor\ for\ the\ HashIndex\ class\r\n
 comment2.params=text\ lineNum
 comment2.target=void\ processText(java.lang.String[],\ int)
+comment2.text=\r\n\ Process\ the\ text\ by\ line\r\n\ @param\ array\ of\ string\ as\ text\ and\ number\ of\ current\ line\r\n\r\n
 comment3.params=
 comment3.target=void\ printIndex()
+comment3.text=\r\n\ Write\ to\ output\ file\ all\ the\ entries\ of\ the\ index\r\n
 comment4.params=word
 comment4.target=boolean\ checkDict(java.lang.String)
-comment4.text=\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\n\ @param\ the\ word\ to\ be\ searched\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\n
-numComments=5
+comment4.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\r\n
+comment5.params=word
+comment5.target=java.lang.String\ printTest(java.lang.String)
+comment5.text=\r\n\ Printing\ method\ used\ for\ testing\r\n\ @param\ the\ word\ to\ be\ inspected\r\n\ @return\ String\ as\ output\ written\ to\ file\r\n
+numComments=6

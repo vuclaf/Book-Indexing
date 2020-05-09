@@ -1,18 +1,21 @@
 #BlueJ class context
 comment0.target=ListIndex
-comment0.text=\n\ Index\ implemented\ by\ a\ list\n\n\ @author\ EvanVu\n
+comment0.text=\r\n\ Index\ implemented\ by\ a\ list\r\n\r\n\ @author\ EvanVu\r\n
 comment1.params=
 comment1.target=ListIndex()
 comment2.params=text\ lineNum
 comment2.target=void\ processText(java.lang.String[],\ int)
-comment2.text=\n\ Receive\ text\ from\ an\ input\ file\ and\ put\ them\ into\ the\ index\n\ @param\ an\ array\ of\ text\n
+comment2.text=\r\n\ Receive\ text\ from\ an\ input\ file\ and\ put\ them\ into\ the\ index\r\n\ @param\ an\ array\ of\ text\r\n
 comment3.params=
 comment3.target=void\ printIndex()
-comment3.text=\n\ Print\ to\ the\ terminal\ the\ index\n
+comment3.text=\r\n\ Print\ to\ the\ terminal\ the\ index\r\n
 comment4.params=word
 comment4.target=boolean\ checkDict(java.lang.String)
-comment4.text=\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\n\ @param\ the\ word\ to\ be\ searched\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\n
+comment4.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ in\ the\ dictionary\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ true\ if\ the\ word\ is\ in\ the\ English\ dictionary\r\n
 comment5.params=word
 comment5.target=int\ checkEntry(java.lang.String)
-comment5.text=\n\ Method\ to\ check\ if\ the\ word\ is\ already\ in\ the\ list\n\ @param\ the\ word\ to\ be\ searched\n\ @return\ true\ if\ the\ word\ is\ in\ the\ list\n
-numComments=6
+comment5.text=\r\n\ Method\ to\ check\ if\ the\ word\ is\ already\ in\ the\ list\r\n\ @param\ the\ word\ to\ be\ searched\r\n\ @return\ the\ pos\ of\ the\ word\ is\ in\ the\ list\r\n
+comment6.params=wordNum
+comment6.target=java.lang.String\ printTest(int)
+comment6.text=\r\n\ Printing\ method\ used\ for\ testing\r\n\ @param\ a\ line\ in\ the\ index\ to\ be\ inspected\r\n\ @return\ String\ as\ output\ written\ to\ file\r\n
+numComments=7

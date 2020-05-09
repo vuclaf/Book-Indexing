@@ -10,10 +10,10 @@ public class ListIndex implements Index
     List<Entry> list = new ArrayList();
     ArrayList<String> dict = new ArrayList();
     PrintWriter writer = null;
+    int rejCount=0;
     
     public ListIndex()throws IOException{
         Scanner sc = new Scanner(new File("English.txt"));
-        sc.nextLine();
         while(sc.hasNext()){
             dict.add(sc.nextLine());
         }
@@ -28,12 +28,17 @@ public class ListIndex implements Index
         for (String word:text){
            int checker=this.checkEntry(word);
            if(this.checkDict(word)){
-               if(checker==-1){
+               if(list.isEmpty()){
                    list.add(new Entry(word));
-                   list.get(list.size()-1).addEntry(lineNum);
+                   list.get(0).addEntry(lineNum);
+               }
+               else if(checker<0){
+                   list.add(-checker-1,new Entry(word));
+                   list.get(-checker-1).addEntry(lineNum);
                }
                else list.get(checker).addEntry(lineNum);
            }
+           else rejCount++;
        }
     }
     
@@ -43,8 +48,8 @@ public class ListIndex implements Index
     public void printIndex(){
         Collections.sort(list);
         for(Entry entry:list){
-            writer.println(entry.printAll());
-            System.out.println(entry.printAll());
+            writer.println(entry.word + " " + entry.set);
+            //System.out.println(entry.printAll());
         }
         writer.close();
     }
@@ -63,13 +68,20 @@ public class ListIndex implements Index
     /**
      * Method to check if the word is already in the list
      * @param the word to be searched
-     * @return true if the word is in the list
+     * @return the pos of the word is in the list
      */
     public int checkEntry(String word){
-        if (list.isEmpty()) return -1;
-        for(Entry entry:list){
-            if (entry.word.equals(word)) return list.indexOf(entry);
-        }
-        return -1;
+        Entry ent= new Entry(word);
+        return Collections.binarySearch(list,ent);
+    }
+    
+    /**
+     * Printing method used for testing
+     * @param a line in the index to be inspected
+     * @return String as output written to file
+     */
+    public String printTest(int wordNum){
+        Collections.sort(list);
+        return list.get(wordNum).word+" "+list.get(wordNum).set;
     }
 }
