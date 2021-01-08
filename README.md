@@ -1,26 +1,28 @@
-# Project 2 - CS 150: Coffee Shop Simulation
+# Project 3 - CS 150:  Book Indexing
 
 ## Intro
-This project is part of the CS150 Course: Data Structures and Algorithms. It tested my understanding of the following data structures in Java: ArrayList, ArrayDeque and PriorityQueue. It also tested my usage of insertion, deletion, sorting of those data structures.
+The purpose of this project is to create a program that will return the index for contents of a book (in .txt format). The project utilizes HashMap, TreeMap and ArrayList to create these indexes. The project also includes a theoretical analysis of the running time creation of the index and printing of the index using each of the three data structures. Experiments are run using different input sizes. These come from .txt files of books found on Project Gutenberg. 
 
 ## Input Specification
-You are given a file “input.txt” containing the following information.
+Books are stored as .txt files, in the /Books directory (named numerically):
+-	The Works of Edgar Allan Poe, Edgar Allan Poe, 4404 words
+-	Macbeth, William Shakespeare, 24755 words
+-	Metamorphosis, Franz Kafka, 25839 words
+-	Strange Case of Dr Jekyll and Mr Hyde, Robert Louis Stevenson, 28873 words
+-	The Call of The Wild, Jack London, 36232 words
+-	The Powerful Wizard of Oz, Frank Baum, 45141 words
+-	The Jungle Book, Ruyard Kipling, 57541 words
+-	The War of the Worlds, H.G Wells, 65608 words
+-	The Adventures of Tom Sawyer, Charles Dickens, 81091 words
+-	The Picture of Dorian Gray, Oscar Wilde, 86303 words
+-	Wuthering Heights, Emily Bronte, 126071 words
+-	The Tale of Two Cities, Charles Dickens, 147375 words
+-	Jane Eyre, Charlotte Bronte, 199884 words
+-	Little Women, Louisa May Alcott, 201645 words
+-	The Brothers Karamazov, Fyodor Dostoevsky, 375107 words
 
-• The first line are two real numbers p1 and p2, 0.00 < p1 ≤ p2 < 10.00, the lower and upper bounds of the
-estimated profit of serving each customer in dollars.
+## Results
+![Creation and Insertion Time](project31.PNG?raw=true "Creation Time")
+![Print Time](project32.PNG?raw=true "Print Time")
 
-• The second line is a real number c, 0.00 < c < 1000.00, the cost of staffing a cashier counter per day in dollars.
-
-• The third line are two integers t1 and t2, 30 < t1 ≤ t2 < 300, the lower and upper bounds of the average time
-for a cashier to serve a customer in seconds.
-
-• From the fourth line to the last line is the arrival times of the customers. Each line contains a string in the format
-of ”hh:mm:ss” in the 24-hour format
-
-## Goal
-The Goal of this project was to examine different numbers of cashiers to be used in the coffee shop and analyze to see the optimal choice, in turn of waiting time and profit
-
-## Report
-![Profit to number of Cashier](project2.PNG?raw=true "Title")
-
-After building an event-driven simulation of a coffee shop, the experimenter obtained a program that would take in different numbers of cashiers and produce average total overflow and average total profit. It can be concluded that, to minimize the number of overflows and optimize profit, the number of cashiers to be chosen should be 4 or 3.
+As hypothesized, an index of words from a text file is most efficiently created by using HashMap. However, when it comes to returning in alphabetical order, TreeMap is more efficient than HashMap, and ListMap might be more efficient than TreeMap. However, the running time is also affected by the number of non-dictionary words in the text.
